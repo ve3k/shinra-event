@@ -15,14 +15,27 @@
 	</abnormality>
 
 	<!-- Weapon debuff -->
-	<abnormality active="true" ingame="true" trigger="Added" target="Self" priority="1">
+	<abnormality active="true" ingame="true" trigger="Added" target="Boss" priority="1">
 		<abnormalities>
 			<abnormality>15161</abnormality><!-- Cold Mercy -->
 			<abnormality>15162</abnormality><!-- Insignia of the Punisher -->
 		</abnormalities>
 		<actions>
 			<notify>
-				<balloon title_text="{abnormality_name} : on" body_text="{abnormality_name}" display_time="2000" />
+				<balloon title_text="{abnormality_name} on" body_text="{abnormality_name}" display_time="2000" />
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Brawler Internal wounds debuff -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Boss" priority="1">
+		<abnormalities>
+			<abnormality>10153141</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name} on" body_text="{abnormality_name}" display_time="2000" />
+				<text_to_speech text="Start burning now!" voice_position="0" voice_gender="Female" volume="100" voice_age="Adult" rate="+3"/>
 			</notify>
 		</actions>
 	</abnormality>
@@ -51,7 +64,7 @@
 		</abnormalities>
 		<actions>
 			<notify>
-				<text_to_speech text="{abnormality_name}" voice_gender="Female" voice_age="Adult" voice_position="0" volume="30" rate="1"/>
+				<text_to_speech text="{abnormality_name}" voice_gender="Female" voice_age="Adult" voice_position="0" volume="30" rate="+1"/>
 			</notify>
 		</actions>
 	</abnormality>
@@ -65,7 +78,7 @@
 		<actions>
 			<notify>
 				<balloon title_text="{abnormality_name} : on" body_text="{abnormality_name}" display_time="3000" />
-				<text_to_speech text="Burn, Burn, Burn" voice_position="0" voice_gender="Male" voice_age="Senior" rate="+3"/>
+				<text_to_speech text="More power!" voice_position="0" voice_gender="Female" voice_age="Adult" rate="+1 />
 			</notify>
 		</actions>
 	</abnormality>
@@ -1818,7 +1831,7 @@
 		<actions>
 			<notify>
 				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
-				<text_to_speech text="Go, Go, GO!" voice_gender="Male" voice_age="Adult"  voice_position="0" volume="100" rate="+1"/>
+				<text_to_speech text="Go Go GO!" voice_gender="Male" voice_age="Adult"  voice_position="0" volume="100" rate="+2"/>
 			</notify>
 		</actions>
 	</abnormality>
@@ -1857,7 +1870,7 @@
 		<actions>
 			<notify>
 				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
-				<text_to_speech text="Go, Go, GO!" voice_gender="Male" voice_age="Adult"  voice_position="0" volume="100" rate="+1"/>
+				<text_to_speech text="Go Go GO!" voice_gender="Male" voice_age="Adult"  voice_position="0" volume="100" rate="+2"/>
 			</notify>
 		</actions>
 	</abnormality>

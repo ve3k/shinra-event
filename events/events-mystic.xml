@@ -517,7 +517,7 @@
 		</actions>
 	</abnormality>
 	<!-- Fortified Thrall of Vengeance (power buff) Ve3k edition -->
-	<abnormality active="true" priority="7" ingame="true" rewarn_timeout_seconds="16" trigger="Added" target="Self">
+	<abnormality active="true" priority="7" ingame="true" rewarn_timeout_seconds="15" trigger="Added" target="Self">
 		<area_boss_blacklist>
 		<!-- PVP Battlegrounds -->
 			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
