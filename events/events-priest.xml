@@ -272,8 +272,8 @@
 			<blacklist area_id="620" /><!-- "Veritas District" -->
 		</area_boss_blacklist>
 		<abnormalities>
-			<abnormality>27160</abnormality><!-- Mystic -->
 			<abnormality>28090</abnormality><!-- Priest -->
+			<abnormality>27160</abnormality><!-- Mystic -->
 		</abnormalities>
 		<actions>
 			<notify>
