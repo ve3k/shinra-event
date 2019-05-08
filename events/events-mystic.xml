@@ -908,7 +908,7 @@
 				<balloon title_text="{abnormality_name}" body_text="{player_name} is too far" display_time="2000" />
 			</notify>
 		</actions>
-	</abnormality
+	</abnormality>
 	<!-- Vow of Rebirth -->
 	<abnormality active="true" ingame="true" rewarn_timeout_seconds="10" remaining_seconds_before_trigger="1" trigger="MissingDuringFight" target="Self">
 		<area_boss_blacklist>

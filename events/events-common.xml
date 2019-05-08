@@ -231,7 +231,7 @@
 	</abnormality>
 	
 	<!-- Crystal bind check for yourself -->
-	<abnormality active="true" ingame="true" priority="8" remaining_seconds_before_trigger="500" rewarn_timeout_seconds="30" trigger="MissingDuringFight" target="Self" priority="2">
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="500" rewarn_timeout_seconds="30" trigger="MissingDuringFight" target="Self" priority="2">
 		<area_boss_blacklist>
 		<!-- PVP Battlegrounds -->
 			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
@@ -1009,6 +1009,7 @@
 			<abnormality>4861</abnormality><!-- "Canephora Potion" -->
 			<abnormality>4953</abnormality><!-- "Canephora Potion (1h duration)" -->
 			<abnormality>4955</abnormality><!-- "Strong Canephora Potion" -->
+		</abnormalities>
 		<actions>
 			<notify>
 				<balloon title_text="{abnormality_name}" body_text="{player_name} {time_left}" display_time="2000" />
