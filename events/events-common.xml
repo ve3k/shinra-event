@@ -134,7 +134,7 @@
 		</abnormalities>
 		<actions>
 		    <notify>
-				<text_to_speech voice_position="0" text="Watch out! Laser!" rate="+2" />
+				<text_to_speech voice_position="0" text="{abnormality_name}, Burn now!" rate="+2" />
 		    </notify>
 		</actions>
 	</abnormality>
@@ -148,7 +148,7 @@
 		</abnormalities>
 		<actions>
 		    <notify>
-				<text_to_speech voice_position="0" text="Watch out! Laser!" rate="+2" />
+				<text_to_speech voice_position="0" text="{abnormality_name}, Carefull." rate="+2" />
 		    </notify>
 		</actions>
 	</abnormality>
