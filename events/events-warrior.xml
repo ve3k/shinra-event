@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<events>
+	
+	<!-- Endurance debuff -->
+	<abnormality active="false" ingame="true" rewarn_timeout_seconds="5" remaining_seconds_before_trigger="0" trigger="MissingDuringFight" target="MyBoss">
+		<abnormalities>
+			<abnormality>101200</abnormality><!-- Warrior -->
+			<abnormality>101210</abnormality><!-- Warrior -->
+			<abnormality>101220</abnormality><!-- Warrior -->
+			<abnormality>200300</abnormality><!-- Lancer -->
+			<abnormality>200301</abnormality><!-- Lancer -->
+			<abnormality>200302</abnormality><!-- Lancer -->
+			<abnormality>10153140</abnormality><!-- Brawler -->
+			<abnormality>401500</abnormality><!-- Berserker -->
+		</abnormalities>
+		<actions>
+			<notify>
+				<beeps>
+					<beep frequency="392" duration="500"/>
+				</beeps>
+			</notify>
+		</actions>
+	</abnormality>
+	<!-- Endurance debuff (traverse cut) -->
+	<abnormality active="false" ingame="true" rewarn_timeout_seconds="8" remaining_seconds_before_trigger="2" trigger="MissingDuringFight" target="MyBoss">
+		<abnormalities>
+			<abnormality>101300</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<text_to_speech text="{abnormality_name}" />
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- atk.speed stacks 13 -->
+	<abnormality active="true" ingame="true" rewarn_timeout_seconds="6" remaining_seconds_before_trigger="5" trigger="MissingDuringFight" target="Self">
+		<abnormalities>
+			<abnormality stack="13">101300</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{stack}" display_time="1000" />
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Stance -->
+	<abnormality active="true" ingame="true" rewarn_timeout_seconds="7" remaining_seconds_before_trigger="3" trigger="MissingDuringFight" target="Self">
+		<abnormalities>
+			<abnormality>100201</abnormality>
+			<abnormality>100103</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<text_to_speech text="{abnormality_name}" />
+			</notify>
+		</actions>
+	</abnormality>
+</events>

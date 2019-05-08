@@ -1,0 +1,1864 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<events>
+
+	<!-- Adrenaline Rush -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Self" priority="5">
+		<abnormalities>
+			<abnormality>200701</abnormality>
+			<abnormality>200700</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<text_to_speech text="{abnormality_name}" voice_gender="Female" voice_age="Adult"  voice_position="0" volume="80" rate="+3"/>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Weapon debuff -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Self" priority="1">
+		<abnormalities>
+			<abnormality>15161</abnormality><!-- Cold Mercy -->
+			<abnormality>15162</abnormality><!-- Insignia of the Punisher -->
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name} : on" body_text="{abnormality_name}" display_time="2000" />
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Mystic contagion -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Boss" priority="5">
+		<abnormalities>
+			<abnormality>701700</abnormality>
+			<abnormality>701701</abnormality>
+			<abnormality>701702</abnormality>
+			<abnormality>701703</abnormality>
+			<abnormality>701704</abnormality>
+			<abnormality>701705</abnormality>
+			<abnormality>701706</abnormality>
+			<abnormality>701707</abnormality>
+			<abnormality>701708</abnormality>
+			<abnormality>701720</abnormality>
+			<abnormality>701721</abnormality>
+			<abnormality>701722</abnormality>
+			<abnormality>701723</abnormality>
+			<abnormality>701724</abnormality>
+			<abnormality>701725</abnormality>
+			<abnormality>701726</abnormality>
+			<abnormality>701727</abnormality>
+			<abnormality>701728</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<text_to_speech text="{abnormality_name}" voice_gender="Female" voice_age="Adult" voice_position="0" volume="30" rate="1"/>
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Burst buffs -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Self" priority="8">
+		<abnormalities>
+			<abnormality>805803</abnormality><!-- Priest -->
+			<abnormality>702004</abnormality><!-- Mystic -->
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name} : on" body_text="{abnormality_name}" display_time="3000" />
+				<text_to_speech text="Burn, Burn, Burn" voice_position="0" voice_gender="Male" voice_age="Senior" rate="+3"/>
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Kaia absorb shield -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Self" priority="7">
+		<abnormalities>
+			<abnormality>800300</abnormality><!-- Priest -->
+			<abnormality>800301</abnormality><!-- Priest -->
+			<abnormality>800302</abnormality><!-- Priest -->
+			<abnormality>800303</abnormality><!-- Priest -->
+			<abnormality>800304</abnormality><!-- Priest -->
+			<abnormality>702001</abnormality><!-- Mystic -->
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="3000" />
+				<text_to_speech voice_position="0" text="Kaya" />
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Notification when something happen & you are not on the Tera windows -->
+	<common_afk priority="0">
+		<actions>
+				<notify>
+					<balloon title_text="{afk_title}" body_text="{afk_body}" display_time="3000" />
+					<text_to_speech text="{afk_body}"  voice_gender="Female" voice_age="Adult"  voice_position="0" volume="30" rate="0" />
+				</notify>
+			</actions>
+	</common_afk>
+	
+	<!-- Raid P3 tank debuff overload warning -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Self" priority="11" >
+		<abnormalities>
+			<abnormality stack="5">950023</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="WARNING {abnormality_name}" body_text="{abnormality_name}" display_time="3000" />
+				<text_to_speech text="WARNING {abnormality_name}" voice_gender="Female" voice_age="Adult" voice_position="0" volume="30" rate="0" />
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Bahaar 30%- laser target debuff -->
+	<abnormality active="true" priority="3" rewarn_timeout_seconds="4" ingame="true" trigger="Added" target="Self">
+		<abnormalities>
+		    <abnormality>90442502</abnormality>
+		</abnormalities>
+		<actions>
+		    <notify>
+				<text_to_speech voice_position="0" text="Watch out! Laser!" rate="+2" />
+		    </notify>
+		</actions>
+	</abnormality>
+
+	<!-- Bahaar's Rage (shield to burn) -->
+	<abnormality active="true" priority="3" rewarn_timeout_seconds="4" ingame="true" trigger="Added" target="Self">
+		<abnormalities>
+		    <abnormality>90442006</abnormality>
+			<abnormality>90442100</abnormality>
+			<abnormality>90442102</abnormality>
+			<abnormality>90442104</abnormality>
+			<abnormality>90442106</abnormality>
+		</abnormalities>
+		<actions>
+		    <notify>
+				<text_to_speech voice_position="0" text="Watch out! Laser!" rate="+2" />
+		    </notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Bahaar's Wrath (extra damage) -->
+	<abnormality active="true" priority="3" rewarn_timeout_seconds="4" ingame="true" trigger="Added" target="Self">
+		<abnormalities>
+		    <abnormality>90442101</abnormality>
+		    <abnormality>90442103</abnormality>
+		    <abnormality>90442107</abnormality>
+		</abnormalities>
+		<actions>
+		    <notify>
+				<text_to_speech voice_position="0" text="Watch out! Laser!" rate="+2" />
+		    </notify>
+		</actions>
+	</abnormality>
+		
+	<!-- Raid 30, phase 3, black debuff (Dust) -->
+	<abnormality active="true" ingame="true" priority="11" trigger="Added" target="Self">
+		<abnormalities>
+			<abnormality>950069</abnormality>
+			<abnormality>950164</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="3000" />
+				<text_to_speech text="Black." voice_gender="Female" voice_age="Adult"  voice_position="0" volume="30" rate="0" />
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Raid 30, phase 3, red debuff (Flame) -->
+	<abnormality active="true" ingame="true" priority="10" trigger="Added" target="Self">
+		<abnormalities>
+			<abnormality>950068</abnormality>
+			<abnormality>950165</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="3000" />
+				<text_to_speech text="Red." voice_gender="Female" voice_age="Adult"  voice_position="0" volume="30" rate="0"/>
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- The boss became enraged -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Boss" priority="7">
+		<abnormalities>
+			<abnormality>8888888</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<text_to_speech text="{abnormality_name} started." voice_gender="Female" voice_age="Adult"  voice_position="0" volume="30" rate="0"/>
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Enrage is ending -->
+	<abnormality active="true" ingame="true" rewarn_timeout_seconds="10" remaining_seconds_before_trigger="5" trigger="Ending" target="Boss">
+		<abnormalities>
+			<abnormality>8888888</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name} is ending." body_text="{abnormality_name} {time_left} left" display_time="3000" />
+			</notify>
+		</actions>
+	</abnormality>	
+	
+	<!-- The boss is not enraged anymore  -->
+	<abnormality  active="false" ingame="true" trigger="Removed" target="Boss">
+		<abnormalities>
+			<abnormality>8888888</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<text_to_speech text="{abnormality_name} OFF." voice_gender="Female" voice_age="Adult"  voice_position="0" volume="80" rate="+2"/>
+			</notify>
+		</actions>
+	</abnormality>
+		
+	<!-- Joy of party is at 100% (everyone is in the dungeons) -->
+	<abnormality active="true" ingame="false" priority="0" trigger="Added" target="Self" out_of_combat="true">
+		<abnormalities>
+			<abnormality>999001021</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="3000" />
+				<text_to_speech text="{abnormality_name}" voice_gender="Female" voice_age="Adult"  voice_position="0" volume="30" rate="0"/>
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Crystal bind check for yourself -->
+	<abnormality active="true" ingame="true" priority="8" remaining_seconds_before_trigger="500" rewarn_timeout_seconds="30" trigger="MissingDuringFight" target="Self" priority="2">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Event dungeons -->
+			<blacklist area_id="618" /><!-- "Super Quiz Bowl" -->
+			<blacklist area_id="451" /><!-- "Squalid Temple" -->
+			<blacklist area_id="452" /><!-- "Banquet of Blood" -->
+			<blacklist area_id="447" /><!-- "Harvest Festival Hall" -->
+		<!-- Leveling dungeons -->
+			<blacklist area_id="487" /><!-- "Bastion of Lok" -->
+			<blacklist area_id="488" /><!-- "Sinestral Manor" -->
+			<blacklist area_id="489" /><!-- "Cultists' Refuge" -->
+			<blacklist area_id="480" /><!-- "Sigil Adstringo" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>CrystalBind</abnormality>
+			<abnormality>CCrystalBind</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name} {time_left}" display_time="3000" />
+				<text_to_speech text="Crystal bind!" voice_gender="Female" voice_age="Adult"  voice_position="0" volume="30" rate="0" />
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Crystal bind check for your party members -->
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="400" rewarn_timeout_seconds="30" trigger="MissingDuringFight" target="PartySelfExcluded" priority="1">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Event dungeons -->
+			<blacklist area_id="618" /><!-- "Super Quiz Bowl" -->
+			<blacklist area_id="451" /><!-- "Squalid Temple" -->
+			<blacklist area_id="452" /><!-- "Banquet of Blood" -->
+			<blacklist area_id="447" /><!-- "Harvest Festival Hall" -->
+		<!-- Leveling dungeons -->
+			<blacklist area_id="487" /><!-- "Bastion of Lok" -->
+			<blacklist area_id="488" /><!-- "Sinestral Manor" -->
+			<blacklist area_id="489" /><!-- "Cultists' Refuge" -->
+			<blacklist area_id="480" /><!-- "Sigil Adstringo" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>CrystalBind</abnormality>
+			<abnormality>CCrystalBind</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{player_name} {time_left}" display_time="3000" />
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Everful Nostrum for yourself -->
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="20" rewarn_timeout_seconds="10" trigger="MissingDuringFight" target="Self" priority="10">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Event dungeons -->
+			<blacklist area_id="618" /><!-- "Super Quiz Bowl" -->
+			<blacklist area_id="451" /><!-- "Squalid Temple" -->
+			<blacklist area_id="452" /><!-- "Banquet of Blood" -->
+			<blacklist area_id="447" /><!-- "Harvest Festival Hall" -->
+		<!-- Leveling dungeons -->
+			<blacklist area_id="487" /><!-- "Bastion of Lok" -->
+			<blacklist area_id="488" /><!-- "Sinestral Manor" -->
+			<blacklist area_id="489" /><!-- "Cultists' Refuge" -->
+			<blacklist area_id="480" /><!-- "Sigil Adstringo" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>4000</abnormality>
+			<abnormality>4001</abnormality>
+			<abnormality>4002</abnormality>
+			<abnormality>4003</abnormality>
+			<abnormality>4004</abnormality>
+			<abnormality>4010</abnormality>
+			<abnormality>4011</abnormality>
+			<abnormality>4012</abnormality>
+			<abnormality>4013</abnormality>
+			<abnormality>4014</abnormality>
+			<abnormality>4020</abnormality>
+			<abnormality>4021</abnormality>
+			<abnormality>4022</abnormality>
+			<abnormality>4023</abnormality>
+			<abnormality>4024</abnormality>
+			<abnormality>4030</abnormality>
+			<abnormality>4031</abnormality>
+			<abnormality>4032</abnormality>
+			<abnormality>4033</abnormality>
+			<abnormality>4040</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<text_to_speech text="Nostrum." voice_gender="Female" voice_age="Adult"  voice_position="0" volume="30" rate="0"/>
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Everful Nostrum for your party members -->
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="20" rewarn_timeout_seconds="20" trigger="MissingDuringFight" target="PartySelfExcluded" priority="1">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Event dungeons -->
+			<blacklist area_id="618" /><!-- "Super Quiz Bowl" -->
+			<blacklist area_id="451" /><!-- "Squalid Temple" -->
+			<blacklist area_id="452" /><!-- "Banquet of Blood" -->
+			<blacklist area_id="447" /><!-- "Harvest Festival Hall" -->
+		<!-- Leveling dungeons -->
+			<blacklist area_id="487" /><!-- "Bastion of Lok" -->
+			<blacklist area_id="488" /><!-- "Sinestral Manor" -->
+			<blacklist area_id="489" /><!-- "Cultists' Refuge" -->
+			<blacklist area_id="480" /><!-- "Sigil Adstringo" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>4000</abnormality>
+			<abnormality>4001</abnormality>
+			<abnormality>4002</abnormality>
+			<abnormality>4003</abnormality>
+			<abnormality>4004</abnormality>
+			<abnormality>4010</abnormality>
+			<abnormality>4011</abnormality>
+			<abnormality>4012</abnormality>
+			<abnormality>4013</abnormality>
+			<abnormality>4014</abnormality>
+			<abnormality>4020</abnormality>
+			<abnormality>4021</abnormality>
+			<abnormality>4022</abnormality>
+			<abnormality>4023</abnormality>
+			<abnormality>4024</abnormality>
+			<abnormality>4030</abnormality>
+			<abnormality>4031</abnormality>
+			<abnormality>4032</abnormality>
+			<abnormality>4033</abnormality>
+			<abnormality>4040</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{player_name} {time_left}" display_time="3000" />
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Noctenium for yourself -->
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="5" rewarn_timeout_seconds="30" trigger="MissingDuringFight" target="Self" priority="6">
+		<area_boss_blacklist>
+		<!-- Event dungeons -->
+			<blacklist area_id="618" /><!-- "Super Quiz Bowl" -->
+			<blacklist area_id="451" /><!-- "Squalid Temple" -->
+			<blacklist area_id="452" /><!-- "Banquet of Blood" -->
+			<blacklist area_id="447" /><!-- "Harvest Festival Hall" -->
+		<!-- Leveling dungeons -->
+			<blacklist area_id="487" /><!-- "Bastion of Lok" -->
+			<blacklist area_id="488" /><!-- "Sinestral Manor" -->
+			<blacklist area_id="489" /><!-- "Cultists' Refuge" -->
+			<blacklist area_id="480" /><!-- "Sigil Adstringo" -->
+			<blacklist area_id="493" /><!-- "Akasha's Hideout" -->
+			<blacklist area_id="494" /><!-- "Saleron's Sky Garden" -->
+			<blacklist area_id="471" /><!-- "Necromancer Tomb" -->
+			<blacklist area_id="472" /><!-- "Golden Labyrinth" -->
+			<blacklist area_id="473" /><!-- "Ebon Tower" -->
+			<blacklist area_id="476" /><!-- "Labyrinth of Terror" -->
+			<blacklist area_id="478" /><!-- "Suryati's Peak" -->
+			<blacklist area_id="479" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="979" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="808" /><!-- "Sabex Armory (Lv. 62)" -->
+			<blacklist area_id="809" /><!-- "Macellarius Catacombs (Lv. 64)" -->
+		<!-- Solo dungeons -->
+			<blacklist area_id="825" /><!-- "Balder's Temple (Solo)" -->
+			<blacklist area_id="830" /><!-- "Celestial Arena (Solo)" -->
+			<blacklist area_id="871" /><!-- "Necromancer Tomb (Solo)" -->
+			<blacklist area_id="872" /><!-- "Golden Labyrinth (Solo)" -->
+			<blacklist area_id="873" /><!-- "Ebon Tower (1 person)" -->
+			<blacklist area_id="887" /><!-- "Bastion of Lok (Solo)" -->
+			<blacklist area_id="888" /><!-- "Sinestral Manor (Solo)" -->
+			<blacklist area_id="889" /><!-- "Cultists' Refuge (Solo)" -->
+			<blacklist area_id="3001" /><!-- "Bastion of Lok (Solo)" -->
+			<blacklist area_id="3002" /><!-- "Sinestral Manor (Solo)" -->
+			<blacklist area_id="3003" /><!-- "Cultists' Refuge (Solo)" -->
+			<blacklist area_id="431" /><!-- "Akasha's Trial" -->
+			<blacklist area_id="432" /><!-- "Baracos' Trial" -->
+			<blacklist area_id="433" /><!-- "Krakatox's Trial" -->
+			<blacklist area_id="3016" /><!-- "Lilith's Trial" -->
+			<blacklist area_id="469" /><!-- "Castle Aranea" -->
+			<blacklist area_id="569" /><!-- "Castle Aranea" -->
+			<blacklist area_id="126" /><!-- "Pit of Petrax" -->
+			<blacklist area_id="481" /><!-- "Training Grounds" -->
+			<blacklist area_id="713" /><!-- "Ghillieglade" -->
+			<blacklist area_id="813" /><!-- "Ghillieglade" -->
+			<blacklist area_id="3012" /><!-- "Training Ground" -->
+		<!-- Awakening quests -->
+			<blacklist area_id="509" /><!-- "Velika Banquet Redux" -->
+			<blacklist area_id="508" /><!-- "Soulscape" -->
+			<blacklist area_id="507" /><!-- "Dragon's Landing" -->
+			<blacklist area_id="506" /><!-- "Velika Banquet" -->
+			<blacklist area_id="505" /><!-- "Ruined Velika Banquet" -->
+			<blacklist area_id="833" /><!-- "Wyrmgorge" -->
+		<!-- Old dungeons -->
+			<blacklist area_id="727" /><!-- "Manaya's Core" -->
+			<blacklist area_id="424" /><!-- "Fane of Kaprima" -->
+			<blacklist area_id="425" /><!-- "Balder's Temple" -->
+			<blacklist area_id="426" /><!-- "Argon Corpus" -->
+			<blacklist area_id="427" /><!-- "Manaya's Core (Hard)" -->
+			<blacklist area_id="724" /><!-- "Fane of Kaprima (Hard)" -->
+			<blacklist area_id="725" /><!-- "Balder's Temple (Hard)" -->
+			<blacklist area_id="726" /><!-- "Argon Corpus (Hard)" -->
+			<blacklist area_id="429" /><!-- "Vault of Kaprima" -->
+			<blacklist area_id="434" /><!-- "Dreadspire" -->
+			<blacklist area_id="453" /><!-- "Kezzel's Gorge" -->
+			<blacklist area_id="454" /><!-- "Bathysmal Rise (Hard)" -->
+			<blacklist area_id="455" /><!-- "Ravenous Gorge" -->
+			<blacklist area_id="456" /><!-- "Timescape (Hard)" -->
+			<blacklist area_id="457" /><!-- "Akeron's Inferno (Hard)" -->
+			<blacklist area_id="459" /><!-- "Forsaken Island" -->
+			<blacklist area_id="460" /><!-- "Kalivan's Dreadnaught (Hard)" -->
+			<blacklist area_id="466" /><!-- "Demon's Wheel" -->
+			<blacklist area_id="467" /><!-- "Demokron Factory (Hard)" -->
+			<blacklist area_id="470" /><!-- "Manglemire" -->
+			<blacklist area_id="475" /><!-- "Kelsaik's Nest" -->
+			<blacklist area_id="482" /><!-- "Temple of Temerity" -->
+			<blacklist area_id="495" /><!-- "Crucible of Flame" -->
+			<blacklist area_id="496" /><!-- "Sirjuka Gallery" -->
+			<blacklist area_id="611" /><!-- "The Abscess (Hard)" -->
+			<blacklist area_id="711" /><!-- "The Abscess (Hard)" -->
+			<blacklist area_id="754" /><!-- "Bathysmal Rise" -->
+			<blacklist area_id="756" /><!-- "Timescape" -->
+			<blacklist area_id="757" /><!-- "Akeron's Inferno" -->
+			<blacklist area_id="759" /><!-- "Forsaken Island (Hard)" -->
+			<blacklist area_id="767" /><!-- "Demokron Factory" -->
+			<blacklist area_id="773" /><!-- "Ebon Tower (Hard)" -->
+			<blacklist area_id="775" /><!-- "Kelsaik's Nest (Hard)" -->
+			<blacklist area_id="776" /><!-- "Labyrinth of Terror (Hard)" -->
+			<blacklist area_id="793" /><!-- "Akasha's Hideout (Hard)" -->
+			<blacklist area_id="795" /><!-- "Crucible of Fame" -->
+			<blacklist area_id="810" /><!-- "Lakan's Prison" -->
+			<blacklist area_id="860" /><!-- "Kalivan's Challenge" -->
+			<blacklist area_id="916" /><!-- "Sky Cruiser Endeavor (Hard)" -->
+			<blacklist area_id="980" /><!-- "Velik's Hold (Hard)" -->
+		<!-- Party dungeons -->
+			<blacklist area_id="794" /><!-- "Thaumetal Refinery" -->
+			<blacklist area_id="811" /><!-- "The Abscess" -->
+			<blacklist area_id="777" /><!-- "Channelworks" -->
+			<blacklist area_id="780" /><!-- "Velik's Hold" -->
+			<blacklist area_id="783" /><!-- "Dark Reach Citadel" -->
+			<blacklist area_id="768" /><!-- "Shadow Sanguinary" -->
+			<blacklist area_id="769" /><!-- "Lilith's Keep" -->
+			<blacklist area_id="760" /><!-- "Kalivan's Dreadnaught" -->
+			<blacklist area_id="766" /><!-- "Shattered Fleet" -->
+			<blacklist area_id="969" /><!-- "Lilith's Keep (Hard)" -->
+			<blacklist area_id="735" /><!-- "RK-9 Kennel" -->
+			<blacklist area_id="739" /><!-- "Red Refuge" -->
+			<blacklist area_id="714" /><!-- "Velik's Sanctuary" -->
+			<blacklist area_id="716" /><!-- "Sky Cruiser Endeavor" -->
+			<blacklist area_id="720" /><!-- "Antaroth's Abyss" -->
+			<blacklist area_id="710" /><!-- "Broken Prison" -->
+			<blacklist area_id="511" /><!-- "The Abscess" -->
+		<!-- Raid dungeons -->
+			<blacklist area_id="750" /><!-- "Rift's Edge" -->
+			<blacklist area_id="450" /><!-- "Rift's Edge (Hard)" -->
+			<blacklist area_id="643" /><!-- "Wonderholme" -->
+			<blacklist area_id="443" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="743" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="477" /><!-- "Batu Desert" -->
+			<blacklist area_id="801" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="802" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="803" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="885" /><!-- "Dreadspire" -->
+			<blacklist area_id="911" /><!-- "Kelsaik's Raid (10-Person Raid)" -->
+			<blacklist area_id="975" /><!-- "Kelsaik's Raid (20-Person Raid)" -->
+			<blacklist area_id="1022" /><!-- "Nexus" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>920</abnormality>
+			<abnormality>921</abnormality>
+			<abnormality>922</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{time_left} seconds" display_time="3000" />
+				<text_to_speech text="Noctenium." voice_gender="Female" voice_age="Adult"  voice_position="0" volume="30" rate="0"/>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Noctenium for party -->
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="5" rewarn_timeout_seconds="30" trigger="MissingDuringFight" target="PartySelfExcluded" priority="1">
+		<area_boss_blacklist>
+		<!-- Event dungeons -->
+			<blacklist area_id="618" /><!-- "Super Quiz Bowl" -->
+			<blacklist area_id="451" /><!-- "Squalid Temple" -->
+			<blacklist area_id="452" /><!-- "Banquet of Blood" -->
+			<blacklist area_id="447" /><!-- "Harvest Festival Hall" -->
+		<!-- Leveling dungeons -->
+			<blacklist area_id="487" /><!-- "Bastion of Lok" -->
+			<blacklist area_id="488" /><!-- "Sinestral Manor" -->
+			<blacklist area_id="489" /><!-- "Cultists' Refuge" -->
+			<blacklist area_id="480" /><!-- "Sigil Adstringo" -->
+			<blacklist area_id="493" /><!-- "Akasha's Hideout" -->
+			<blacklist area_id="494" /><!-- "Saleron's Sky Garden" -->
+			<blacklist area_id="471" /><!-- "Necromancer Tomb" -->
+			<blacklist area_id="472" /><!-- "Golden Labyrinth" -->
+			<blacklist area_id="473" /><!-- "Ebon Tower" -->
+			<blacklist area_id="476" /><!-- "Labyrinth of Terror" -->
+			<blacklist area_id="478" /><!-- "Suryati's Peak" -->
+			<blacklist area_id="479" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="979" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="808" /><!-- "Sabex Armory (Lv. 62)" -->
+			<blacklist area_id="809" /><!-- "Macellarius Catacombs (Lv. 64)" -->
+		<!-- Solo dungeons -->
+			<blacklist area_id="825" /><!-- "Balder's Temple (Solo)" -->
+			<blacklist area_id="830" /><!-- "Celestial Arena (Solo)" -->
+			<blacklist area_id="871" /><!-- "Necromancer Tomb (Solo)" -->
+			<blacklist area_id="872" /><!-- "Golden Labyrinth (Solo)" -->
+			<blacklist area_id="873" /><!-- "Ebon Tower (1 person)" -->
+			<blacklist area_id="887" /><!-- "Bastion of Lok (Solo)" -->
+			<blacklist area_id="888" /><!-- "Sinestral Manor (Solo)" -->
+			<blacklist area_id="889" /><!-- "Cultists' Refuge (Solo)" -->
+			<blacklist area_id="3001" /><!-- "Bastion of Lok (Solo)" -->
+			<blacklist area_id="3002" /><!-- "Sinestral Manor (Solo)" -->
+			<blacklist area_id="3003" /><!-- "Cultists' Refuge (Solo)" -->
+			<blacklist area_id="431" /><!-- "Akasha's Trial" -->
+			<blacklist area_id="432" /><!-- "Baracos' Trial" -->
+			<blacklist area_id="433" /><!-- "Krakatox's Trial" -->
+			<blacklist area_id="3016" /><!-- "Lilith's Trial" -->
+			<blacklist area_id="469" /><!-- "Castle Aranea" -->
+			<blacklist area_id="569" /><!-- "Castle Aranea" -->
+			<blacklist area_id="126" /><!-- "Pit of Petrax" -->
+			<blacklist area_id="481" /><!-- "Training Grounds" -->
+			<blacklist area_id="713" /><!-- "Ghillieglade" -->
+			<blacklist area_id="813" /><!-- "Ghillieglade" -->
+			<blacklist area_id="3012" /><!-- "Training Ground" -->
+		<!-- Awakening quests -->
+			<blacklist area_id="509" /><!-- "Velika Banquet Redux" -->
+			<blacklist area_id="508" /><!-- "Soulscape" -->
+			<blacklist area_id="507" /><!-- "Dragon's Landing" -->
+			<blacklist area_id="506" /><!-- "Velika Banquet" -->
+			<blacklist area_id="505" /><!-- "Ruined Velika Banquet" -->
+			<blacklist area_id="833" /><!-- "Wyrmgorge" -->
+		<!-- Old dungeons -->
+			<blacklist area_id="727" /><!-- "Manaya's Core" -->
+			<blacklist area_id="424" /><!-- "Fane of Kaprima" -->
+			<blacklist area_id="425" /><!-- "Balder's Temple" -->
+			<blacklist area_id="426" /><!-- "Argon Corpus" -->
+			<blacklist area_id="427" /><!-- "Manaya's Core (Hard)" -->
+			<blacklist area_id="724" /><!-- "Fane of Kaprima (Hard)" -->
+			<blacklist area_id="725" /><!-- "Balder's Temple (Hard)" -->
+			<blacklist area_id="726" /><!-- "Argon Corpus (Hard)" -->
+			<blacklist area_id="429" /><!-- "Vault of Kaprima" -->
+			<blacklist area_id="434" /><!-- "Dreadspire" -->
+			<blacklist area_id="453" /><!-- "Kezzel's Gorge" -->
+			<blacklist area_id="454" /><!-- "Bathysmal Rise (Hard)" -->
+			<blacklist area_id="455" /><!-- "Ravenous Gorge" -->
+			<blacklist area_id="456" /><!-- "Timescape (Hard)" -->
+			<blacklist area_id="457" /><!-- "Akeron's Inferno (Hard)" -->
+			<blacklist area_id="459" /><!-- "Forsaken Island" -->
+			<blacklist area_id="460" /><!-- "Kalivan's Dreadnaught (Hard)" -->
+			<blacklist area_id="466" /><!-- "Demon's Wheel" -->
+			<blacklist area_id="467" /><!-- "Demokron Factory (Hard)" -->
+			<blacklist area_id="470" /><!-- "Manglemire" -->
+			<blacklist area_id="475" /><!-- "Kelsaik's Nest" -->
+			<blacklist area_id="482" /><!-- "Temple of Temerity" -->
+			<blacklist area_id="495" /><!-- "Crucible of Flame" -->
+			<blacklist area_id="496" /><!-- "Sirjuka Gallery" -->
+			<blacklist area_id="611" /><!-- "The Abscess (Hard)" -->
+			<blacklist area_id="711" /><!-- "The Abscess (Hard)" -->
+			<blacklist area_id="754" /><!-- "Bathysmal Rise" -->
+			<blacklist area_id="756" /><!-- "Timescape" -->
+			<blacklist area_id="757" /><!-- "Akeron's Inferno" -->
+			<blacklist area_id="759" /><!-- "Forsaken Island (Hard)" -->
+			<blacklist area_id="767" /><!-- "Demokron Factory" -->
+			<blacklist area_id="773" /><!-- "Ebon Tower (Hard)" -->
+			<blacklist area_id="775" /><!-- "Kelsaik's Nest (Hard)" -->
+			<blacklist area_id="776" /><!-- "Labyrinth of Terror (Hard)" -->
+			<blacklist area_id="793" /><!-- "Akasha's Hideout (Hard)" -->
+			<blacklist area_id="795" /><!-- "Crucible of Fame" -->
+			<blacklist area_id="810" /><!-- "Lakan's Prison" -->
+			<blacklist area_id="860" /><!-- "Kalivan's Challenge" -->
+			<blacklist area_id="916" /><!-- "Sky Cruiser Endeavor (Hard)" -->
+			<blacklist area_id="980" /><!-- "Velik's Hold (Hard)" -->
+		<!-- Party dungeons -->
+			<blacklist area_id="794" /><!-- "Thaumetal Refinery" -->
+			<blacklist area_id="811" /><!-- "The Abscess" -->
+			<blacklist area_id="777" /><!-- "Channelworks" -->
+			<blacklist area_id="780" /><!-- "Velik's Hold" -->
+			<blacklist area_id="783" /><!-- "Dark Reach Citadel" -->
+			<blacklist area_id="768" /><!-- "Shadow Sanguinary" -->
+			<blacklist area_id="769" /><!-- "Lilith's Keep" -->
+			<blacklist area_id="760" /><!-- "Kalivan's Dreadnaught" -->
+			<blacklist area_id="766" /><!-- "Shattered Fleet" -->
+			<blacklist area_id="969" /><!-- "Lilith's Keep (Hard)" -->
+			<blacklist area_id="735" /><!-- "RK-9 Kennel" -->
+			<blacklist area_id="739" /><!-- "Red Refuge" -->
+			<blacklist area_id="714" /><!-- "Velik's Sanctuary" -->
+			<blacklist area_id="716" /><!-- "Sky Cruiser Endeavor" -->
+			<blacklist area_id="720" /><!-- "Antaroth's Abyss" -->
+			<blacklist area_id="710" /><!-- "Broken Prison" -->
+			<blacklist area_id="511" /><!-- "The Abscess" -->
+		<!-- Raid dungeons -->
+			<blacklist area_id="750" /><!-- "Rift's Edge" -->
+			<blacklist area_id="450" /><!-- "Rift's Edge (Hard)" -->
+			<blacklist area_id="643" /><!-- "Wonderholme" -->
+			<blacklist area_id="443" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="743" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="477" /><!-- "Batu Desert" -->
+			<blacklist area_id="801" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="802" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="803" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="885" /><!-- "Dreadspire" -->
+			<blacklist area_id="911" /><!-- "Kelsaik's Raid (10-Person Raid)" -->
+			<blacklist area_id="975" /><!-- "Kelsaik's Raid (20-Person Raid)" -->
+			<blacklist area_id="1022" /><!-- "Nexus" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>920</abnormality>
+			<abnormality>921</abnormality>
+			<abnormality>922</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{player_name} {time_left}" display_time="2000" />
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Bravery for yourself -->
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="5" rewarn_timeout_seconds="30" trigger="MissingDuringFight" target="Self" priority="6">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Event dungeons -->
+			<blacklist area_id="618" /><!-- "Super Quiz Bowl" -->
+			<blacklist area_id="451" /><!-- "Squalid Temple" -->
+			<blacklist area_id="452" /><!-- "Banquet of Blood" -->
+			<blacklist area_id="447" /><!-- "Harvest Festival Hall" -->
+		<!-- Leveling dungeons -->
+			<blacklist area_id="487" /><!-- "Bastion of Lok" -->
+			<blacklist area_id="488" /><!-- "Sinestral Manor" -->
+			<blacklist area_id="489" /><!-- "Cultists' Refuge" -->
+			<blacklist area_id="480" /><!-- "Sigil Adstringo" -->
+			<blacklist area_id="493" /><!-- "Akasha's Hideout" -->
+			<blacklist area_id="494" /><!-- "Saleron's Sky Garden" -->
+			<blacklist area_id="471" /><!-- "Necromancer Tomb" -->
+			<blacklist area_id="472" /><!-- "Golden Labyrinth" -->
+			<blacklist area_id="473" /><!-- "Ebon Tower" -->
+			<blacklist area_id="476" /><!-- "Labyrinth of Terror" -->
+			<blacklist area_id="478" /><!-- "Suryati's Peak" -->
+			<blacklist area_id="479" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="979" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="808" /><!-- "Sabex Armory (Lv. 62)" -->
+			<blacklist area_id="809" /><!-- "Macellarius Catacombs (Lv. 64)" -->
+		<!-- Solo dungeons -->
+			<blacklist area_id="825" /><!-- "Balder's Temple (Solo)" -->
+			<blacklist area_id="830" /><!-- "Celestial Arena (Solo)" -->
+			<blacklist area_id="871" /><!-- "Necromancer Tomb (Solo)" -->
+			<blacklist area_id="872" /><!-- "Golden Labyrinth (Solo)" -->
+			<blacklist area_id="873" /><!-- "Ebon Tower (1 person)" -->
+			<blacklist area_id="887" /><!-- "Bastion of Lok (Solo)" -->
+			<blacklist area_id="888" /><!-- "Sinestral Manor (Solo)" -->
+			<blacklist area_id="889" /><!-- "Cultists' Refuge (Solo)" -->
+			<blacklist area_id="3001" /><!-- "Bastion of Lok (Solo)" -->
+			<blacklist area_id="3002" /><!-- "Sinestral Manor (Solo)" -->
+			<blacklist area_id="3003" /><!-- "Cultists' Refuge (Solo)" -->
+			<blacklist area_id="431" /><!-- "Akasha's Trial" -->
+			<blacklist area_id="432" /><!-- "Baracos' Trial" -->
+			<blacklist area_id="433" /><!-- "Krakatox's Trial" -->
+			<blacklist area_id="3016" /><!-- "Lilith's Trial" -->
+			<blacklist area_id="469" /><!-- "Castle Aranea" -->
+			<blacklist area_id="569" /><!-- "Castle Aranea" -->
+			<blacklist area_id="126" /><!-- "Pit of Petrax" -->
+			<blacklist area_id="481" /><!-- "Training Grounds" -->
+			<blacklist area_id="713" /><!-- "Ghillieglade" -->
+			<blacklist area_id="813" /><!-- "Ghillieglade" -->
+			<blacklist area_id="3012" /><!-- "Training Ground" -->
+		<!-- Awakening quests -->
+			<blacklist area_id="509" /><!-- "Velika Banquet Redux" -->
+			<blacklist area_id="508" /><!-- "Soulscape" -->
+			<blacklist area_id="507" /><!-- "Dragon's Landing" -->
+			<blacklist area_id="506" /><!-- "Velika Banquet" -->
+			<blacklist area_id="505" /><!-- "Ruined Velika Banquet" -->
+			<blacklist area_id="833" /><!-- "Wyrmgorge" -->
+		<!-- Old dungeons -->
+			<blacklist area_id="727" /><!-- "Manaya's Core" -->
+			<blacklist area_id="424" /><!-- "Fane of Kaprima" -->
+			<blacklist area_id="425" /><!-- "Balder's Temple" -->
+			<blacklist area_id="426" /><!-- "Argon Corpus" -->
+			<blacklist area_id="427" /><!-- "Manaya's Core (Hard)" -->
+			<blacklist area_id="724" /><!-- "Fane of Kaprima (Hard)" -->
+			<blacklist area_id="725" /><!-- "Balder's Temple (Hard)" -->
+			<blacklist area_id="726" /><!-- "Argon Corpus (Hard)" -->
+			<blacklist area_id="429" /><!-- "Vault of Kaprima" -->
+			<blacklist area_id="434" /><!-- "Dreadspire" -->
+			<blacklist area_id="453" /><!-- "Kezzel's Gorge" -->
+			<blacklist area_id="454" /><!-- "Bathysmal Rise (Hard)" -->
+			<blacklist area_id="455" /><!-- "Ravenous Gorge" -->
+			<blacklist area_id="456" /><!-- "Timescape (Hard)" -->
+			<blacklist area_id="457" /><!-- "Akeron's Inferno (Hard)" -->
+			<blacklist area_id="459" /><!-- "Forsaken Island" -->
+			<blacklist area_id="460" /><!-- "Kalivan's Dreadnaught (Hard)" -->
+			<blacklist area_id="466" /><!-- "Demon's Wheel" -->
+			<blacklist area_id="470" /><!-- "Manglemire" -->
+			<blacklist area_id="475" /><!-- "Kelsaik's Nest" -->
+			<blacklist area_id="482" /><!-- "Temple of Temerity" -->
+			<blacklist area_id="496" /><!-- "Sirjuka Gallery" -->
+			<blacklist area_id="611" /><!-- "The Abscess (Hard)" -->
+			<blacklist area_id="711" /><!-- "The Abscess (Hard)" -->
+			<blacklist area_id="754" /><!-- "Bathysmal Rise" -->
+			<blacklist area_id="756" /><!-- "Timescape" -->
+			<blacklist area_id="757" /><!-- "Akeron's Inferno" -->
+			<blacklist area_id="759" /><!-- "Forsaken Island (Hard)" -->
+			<blacklist area_id="773" /><!-- "Ebon Tower (Hard)" -->
+			<blacklist area_id="775" /><!-- "Kelsaik's Nest (Hard)" -->
+			<blacklist area_id="776" /><!-- "Labyrinth of Terror (Hard)" -->
+			<blacklist area_id="793" /><!-- "Akasha's Hideout (Hard)" -->
+			<blacklist area_id="810" /><!-- "Lakan's Prison" -->
+			<blacklist area_id="860" /><!-- "Kalivan's Challenge" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>4830</abnormality><!-- "(Old) Bravery Potion" -->
+			<abnormality>4831</abnormality><!-- "Bravery" -->
+			<abnormality>4832</abnormality><!-- "Bravery (JPN event buff)" -->
+			<abnormality>4833</abnormality><!-- "Strong Bravery Potion" -->
+			<abnormality>4841</abnormality><!-- "Bravery" -->
+			<abnormality>4886</abnormality><!-- "Bravery Potion" -->
+			<abnormality>4861</abnormality><!-- "Canephora Potion" -->
+			<abnormality>4953</abnormality><!-- "Canephora Potion (1h duration)" -->
+			<abnormality>4955</abnormality><!-- "Strong Canephora Potion" -->
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="Bravery/Canephora" body_text="{time_left} seconds" display_time="3000" />
+				<text_to_speech text="Bravery." voice_gender="Female" voice_age="Adult"  voice_position="0" volume="30" rate="+2"/>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Bravery for party -->
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="5" rewarn_timeout_seconds="30" trigger="MissingDuringFight" target="PartySelfExcluded" priority="1" ignore_classes="Mystic,Priest">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Event dungeons -->
+			<blacklist area_id="618" /><!-- "Super Quiz Bowl" -->
+			<blacklist area_id="451" /><!-- "Squalid Temple" -->
+			<blacklist area_id="452" /><!-- "Banquet of Blood" -->
+			<blacklist area_id="447" /><!-- "Harvest Festival Hall" -->
+		<!-- Leveling dungeons -->
+			<blacklist area_id="487" /><!-- "Bastion of Lok" -->
+			<blacklist area_id="488" /><!-- "Sinestral Manor" -->
+			<blacklist area_id="489" /><!-- "Cultists' Refuge" -->
+			<blacklist area_id="480" /><!-- "Sigil Adstringo" -->
+			<blacklist area_id="493" /><!-- "Akasha's Hideout" -->
+			<blacklist area_id="494" /><!-- "Saleron's Sky Garden" -->
+			<blacklist area_id="471" /><!-- "Necromancer Tomb" -->
+			<blacklist area_id="472" /><!-- "Golden Labyrinth" -->
+			<blacklist area_id="473" /><!-- "Ebon Tower" -->
+			<blacklist area_id="476" /><!-- "Labyrinth of Terror" -->
+			<blacklist area_id="478" /><!-- "Suryati's Peak" -->
+			<blacklist area_id="479" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="979" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="808" /><!-- "Sabex Armory (Lv. 62)" -->
+			<blacklist area_id="809" /><!-- "Macellarius Catacombs (Lv. 64)" -->
+		<!-- Solo dungeons -->
+			<blacklist area_id="825" /><!-- "Balder's Temple (Solo)" -->
+			<blacklist area_id="830" /><!-- "Celestial Arena (Solo)" -->
+			<blacklist area_id="871" /><!-- "Necromancer Tomb (Solo)" -->
+			<blacklist area_id="872" /><!-- "Golden Labyrinth (Solo)" -->
+			<blacklist area_id="873" /><!-- "Ebon Tower (1 person)" -->
+			<blacklist area_id="887" /><!-- "Bastion of Lok (Solo)" -->
+			<blacklist area_id="888" /><!-- "Sinestral Manor (Solo)" -->
+			<blacklist area_id="889" /><!-- "Cultists' Refuge (Solo)" -->
+			<blacklist area_id="3001" /><!-- "Bastion of Lok (Solo)" -->
+			<blacklist area_id="3002" /><!-- "Sinestral Manor (Solo)" -->
+			<blacklist area_id="3003" /><!-- "Cultists' Refuge (Solo)" -->
+			<blacklist area_id="431" /><!-- "Akasha's Trial" -->
+			<blacklist area_id="432" /><!-- "Baracos' Trial" -->
+			<blacklist area_id="433" /><!-- "Krakatox's Trial" -->
+			<blacklist area_id="3016" /><!-- "Lilith's Trial" -->
+			<blacklist area_id="469" /><!-- "Castle Aranea" -->
+			<blacklist area_id="569" /><!-- "Castle Aranea" -->
+			<blacklist area_id="126" /><!-- "Pit of Petrax" -->
+			<blacklist area_id="481" /><!-- "Training Grounds" -->
+			<blacklist area_id="713" /><!-- "Ghillieglade" -->
+			<blacklist area_id="813" /><!-- "Ghillieglade" -->
+			<blacklist area_id="3012" /><!-- "Training Ground" -->
+		<!-- Awakening quests -->
+			<blacklist area_id="509" /><!-- "Velika Banquet Redux" -->
+			<blacklist area_id="508" /><!-- "Soulscape" -->
+			<blacklist area_id="507" /><!-- "Dragon's Landing" -->
+			<blacklist area_id="506" /><!-- "Velika Banquet" -->
+			<blacklist area_id="505" /><!-- "Ruined Velika Banquet" -->
+			<blacklist area_id="833" /><!-- "Wyrmgorge" -->
+		<!-- Old dungeons -->
+			<blacklist area_id="727" /><!-- "Manaya's Core" -->
+			<blacklist area_id="424" /><!-- "Fane of Kaprima" -->
+			<blacklist area_id="425" /><!-- "Balder's Temple" -->
+			<blacklist area_id="426" /><!-- "Argon Corpus" -->
+			<blacklist area_id="427" /><!-- "Manaya's Core (Hard)" -->
+			<blacklist area_id="724" /><!-- "Fane of Kaprima (Hard)" -->
+			<blacklist area_id="725" /><!-- "Balder's Temple (Hard)" -->
+			<blacklist area_id="726" /><!-- "Argon Corpus (Hard)" -->
+			<blacklist area_id="429" /><!-- "Vault of Kaprima" -->
+			<blacklist area_id="434" /><!-- "Dreadspire" -->
+			<blacklist area_id="453" /><!-- "Kezzel's Gorge" -->
+			<blacklist area_id="454" /><!-- "Bathysmal Rise (Hard)" -->
+			<blacklist area_id="455" /><!-- "Ravenous Gorge" -->
+			<blacklist area_id="456" /><!-- "Timescape (Hard)" -->
+			<blacklist area_id="457" /><!-- "Akeron's Inferno (Hard)" -->
+			<blacklist area_id="459" /><!-- "Forsaken Island" -->
+			<blacklist area_id="460" /><!-- "Kalivan's Dreadnaught (Hard)" -->
+			<blacklist area_id="466" /><!-- "Demon's Wheel" -->
+			<blacklist area_id="470" /><!-- "Manglemire" -->
+			<blacklist area_id="475" /><!-- "Kelsaik's Nest" -->
+			<blacklist area_id="482" /><!-- "Temple of Temerity" -->
+			<blacklist area_id="496" /><!-- "Sirjuka Gallery" -->
+			<blacklist area_id="611" /><!-- "The Abscess (Hard)" -->
+			<blacklist area_id="711" /><!-- "The Abscess (Hard)" -->
+			<blacklist area_id="754" /><!-- "Bathysmal Rise" -->
+			<blacklist area_id="756" /><!-- "Timescape" -->
+			<blacklist area_id="757" /><!-- "Akeron's Inferno" -->
+			<blacklist area_id="759" /><!-- "Forsaken Island (Hard)" -->
+			<blacklist area_id="773" /><!-- "Ebon Tower (Hard)" -->
+			<blacklist area_id="775" /><!-- "Kelsaik's Nest (Hard)" -->
+			<blacklist area_id="776" /><!-- "Labyrinth of Terror (Hard)" -->
+			<blacklist area_id="793" /><!-- "Akasha's Hideout (Hard)" -->
+			<blacklist area_id="810" /><!-- "Lakan's Prison" -->
+			<blacklist area_id="860" /><!-- "Kalivan's Challenge" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>4830</abnormality><!-- "(Old) Bravery Potion" -->
+			<abnormality>4831</abnormality><!-- "Bravery" -->
+			<abnormality>4832</abnormality><!-- "Bravery (JPN event buff)" -->
+			<abnormality>4833</abnormality><!-- "Strong Bravery Potion" -->
+			<abnormality>4841</abnormality><!-- "Bravery" -->
+			<abnormality>4886</abnormality><!-- "Bravery Potion" -->
+			<abnormality>4861</abnormality><!-- "Canephora Potion" -->
+			<abnormality>4953</abnormality><!-- "Canephora Potion (1h duration)" -->
+			<abnormality>4955</abnormality><!-- "Strong Canephora Potion" -->
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{player_name} {time_left}" display_time="2000" />
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Food for yourself -->
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="30" rewarn_timeout_seconds="5" trigger="MissingDuringFight" target="Self" priority="4">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Event dungeons -->
+			<blacklist area_id="618" /><!-- "Super Quiz Bowl" -->
+			<blacklist area_id="451" /><!-- "Squalid Temple" -->
+			<blacklist area_id="452" /><!-- "Banquet of Blood" -->
+			<blacklist area_id="447" /><!-- "Harvest Festival Hall" -->
+		<!-- Leveling dungeons -->
+			<blacklist area_id="487" /><!-- "Bastion of Lok" -->
+			<blacklist area_id="488" /><!-- "Sinestral Manor" -->
+			<blacklist area_id="489" /><!-- "Cultists' Refuge" -->
+			<blacklist area_id="480" /><!-- "Sigil Adstringo" -->
+			<blacklist area_id="493" /><!-- "Akasha's Hideout" -->
+			<blacklist area_id="494" /><!-- "Saleron's Sky Garden" -->
+			<blacklist area_id="471" /><!-- "Necromancer Tomb" -->
+			<blacklist area_id="472" /><!-- "Golden Labyrinth" -->
+			<blacklist area_id="473" /><!-- "Ebon Tower" -->
+			<blacklist area_id="476" /><!-- "Labyrinth of Terror" -->
+			<blacklist area_id="478" /><!-- "Suryati's Peak" -->
+			<blacklist area_id="479" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="979" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="808" /><!-- "Sabex Armory (Lv. 62)" -->
+			<blacklist area_id="809" /><!-- "Macellarius Catacombs (Lv. 64)" -->
+		<!-- Solo dungeons -->
+			<blacklist area_id="825" /><!-- "Balder's Temple (Solo)" -->
+			<blacklist area_id="830" /><!-- "Celestial Arena (Solo)" -->
+			<blacklist area_id="871" /><!-- "Necromancer Tomb (Solo)" -->
+			<blacklist area_id="872" /><!-- "Golden Labyrinth (Solo)" -->
+			<blacklist area_id="873" /><!-- "Ebon Tower (1 person)" -->
+			<blacklist area_id="887" /><!-- "Bastion of Lok (Solo)" -->
+			<blacklist area_id="888" /><!-- "Sinestral Manor (Solo)" -->
+			<blacklist area_id="889" /><!-- "Cultists' Refuge (Solo)" -->
+			<blacklist area_id="3001" /><!-- "Bastion of Lok (Solo)" -->
+			<blacklist area_id="3002" /><!-- "Sinestral Manor (Solo)" -->
+			<blacklist area_id="3003" /><!-- "Cultists' Refuge (Solo)" -->
+			<blacklist area_id="431" /><!-- "Akasha's Trial" -->
+			<blacklist area_id="432" /><!-- "Baracos' Trial" -->
+			<blacklist area_id="433" /><!-- "Krakatox's Trial" -->
+			<blacklist area_id="3016" /><!-- "Lilith's Trial" -->
+			<blacklist area_id="469" /><!-- "Castle Aranea" -->
+			<blacklist area_id="569" /><!-- "Castle Aranea" -->
+			<blacklist area_id="126" /><!-- "Pit of Petrax" -->
+			<blacklist area_id="481" /><!-- "Training Grounds" -->
+			<blacklist area_id="713" /><!-- "Ghillieglade" -->
+			<blacklist area_id="813" /><!-- "Ghillieglade" -->
+			<blacklist area_id="3012" /><!-- "Training Ground" -->
+		<!-- Awakening quests -->
+			<blacklist area_id="509" /><!-- "Velika Banquet Redux" -->
+			<blacklist area_id="508" /><!-- "Soulscape" -->
+			<blacklist area_id="507" /><!-- "Dragon's Landing" -->
+			<blacklist area_id="506" /><!-- "Velika Banquet" -->
+			<blacklist area_id="505" /><!-- "Ruined Velika Banquet" -->
+			<blacklist area_id="833" /><!-- "Wyrmgorge" -->
+		<!-- Old dungeons -->
+			<blacklist area_id="727" /><!-- "Manaya's Core" -->
+			<blacklist area_id="424" /><!-- "Fane of Kaprima" -->
+			<blacklist area_id="425" /><!-- "Balder's Temple" -->
+			<blacklist area_id="426" /><!-- "Argon Corpus" -->
+			<blacklist area_id="427" /><!-- "Manaya's Core (Hard)" -->
+			<blacklist area_id="724" /><!-- "Fane of Kaprima (Hard)" -->
+			<blacklist area_id="725" /><!-- "Balder's Temple (Hard)" -->
+			<blacklist area_id="726" /><!-- "Argon Corpus (Hard)" -->
+			<blacklist area_id="429" /><!-- "Vault of Kaprima" -->
+			<blacklist area_id="434" /><!-- "Dreadspire" -->
+			<blacklist area_id="453" /><!-- "Kezzel's Gorge" -->
+			<blacklist area_id="454" /><!-- "Bathysmal Rise (Hard)" -->
+			<blacklist area_id="455" /><!-- "Ravenous Gorge" -->
+			<blacklist area_id="456" /><!-- "Timescape (Hard)" -->
+			<blacklist area_id="457" /><!-- "Akeron's Inferno (Hard)" -->
+			<blacklist area_id="459" /><!-- "Forsaken Island" -->
+			<blacklist area_id="460" /><!-- "Kalivan's Dreadnaught (Hard)" -->
+			<blacklist area_id="466" /><!-- "Demon's Wheel" -->
+			<blacklist area_id="467" /><!-- "Demokron Factory (Hard)" -->
+			<blacklist area_id="470" /><!-- "Manglemire" -->
+			<blacklist area_id="475" /><!-- "Kelsaik's Nest" -->
+			<blacklist area_id="482" /><!-- "Temple of Temerity" -->
+			<blacklist area_id="495" /><!-- "Crucible of Flame" -->
+			<blacklist area_id="496" /><!-- "Sirjuka Gallery" -->
+			<blacklist area_id="611" /><!-- "The Abscess (Hard)" -->
+			<blacklist area_id="711" /><!-- "The Abscess (Hard)" -->
+			<blacklist area_id="754" /><!-- "Bathysmal Rise" -->
+			<blacklist area_id="756" /><!-- "Timescape" -->
+			<blacklist area_id="757" /><!-- "Akeron's Inferno" -->
+			<blacklist area_id="759" /><!-- "Forsaken Island (Hard)" -->
+			<blacklist area_id="767" /><!-- "Demokron Factory" -->
+			<blacklist area_id="773" /><!-- "Ebon Tower (Hard)" -->
+			<blacklist area_id="775" /><!-- "Kelsaik's Nest (Hard)" -->
+			<blacklist area_id="776" /><!-- "Labyrinth of Terror (Hard)" -->
+			<blacklist area_id="793" /><!-- "Akasha's Hideout (Hard)" -->
+			<blacklist area_id="795" /><!-- "Crucible of Fame" -->
+			<blacklist area_id="810" /><!-- "Lakan's Prison" -->
+			<blacklist area_id="860" /><!-- "Kalivan's Challenge" -->
+			<blacklist area_id="916" /><!-- "Sky Cruiser Endeavor (Hard)" -->
+			<blacklist area_id="980" /><!-- "Velik's Hold (Hard)" -->
+		<!-- Party dungeons -->
+			<blacklist area_id="794" /><!-- "Thaumetal Refinery" -->
+			<blacklist area_id="811" /><!-- "The Abscess" -->
+			<blacklist area_id="777" /><!-- "Channelworks" -->
+			<blacklist area_id="780" /><!-- "Velik's Hold" -->
+			<blacklist area_id="783" /><!-- "Dark Reach Citadel" -->
+			<blacklist area_id="768" /><!-- "Shadow Sanguinary" -->
+			<blacklist area_id="769" /><!-- "Lilith's Keep" -->
+			<blacklist area_id="770" /><!-- "Ruinous Manor" -->
+			<blacklist area_id="760" /><!-- "Kalivan's Dreadnaught" -->
+			<blacklist area_id="766" /><!-- "Shattered Fleet" -->
+			<blacklist area_id="969" /><!-- "Lilith's Keep (Hard)" -->
+			<blacklist area_id="735" /><!-- "RK-9 Kennel" -->
+			<blacklist area_id="739" /><!-- "Red Refuge" -->
+			<blacklist area_id="714" /><!-- "Velik's Sanctuary" -->
+			<blacklist area_id="716" /><!-- "Sky Cruiser Endeavor" -->
+			<blacklist area_id="720" /><!-- "Antaroth's Abyss" -->
+			<blacklist area_id="710" /><!-- "Broken Prison" -->
+			<blacklist area_id="511" /><!-- "The Abscess" -->
+			<blacklist area_id="994" /><!-- "Thaumetal Refinery (Hard)" -->
+			<blacklist area_id="3017" /><!-- "Antaroth's Abyss (7-person)" -->
+			<blacklist area_id="3018" /><!-- "Dark Reach Citadel (7-person)" -->
+			<blacklist area_id="3019" /><!-- "Grotto of Lost Souls (7-person)" -->
+			<blacklist area_id="781" /> <!-- "Velik's Sanctuary" -->
+			<blacklist area_id="782" /> <!-- "Grotto of Lost Souls" -->
+			<blacklist area_id="970" /> <!-- "Ruinous Manor (Hard)" -->
+			<blacklist area_id="920" /> <!-- "Antaroth's Abyss (Hard)" -->
+			<blacklist area_id="935" /> <!-- "RK-9 Kennel (Hard)" -->
+			<blacklist area_id="939" /> <!-- "Red Refuge (Hard)" -->
+			<blacklist area_id="468" /> <!-- "Shadow Sanguinary (Hard)" -->
+		<!-- Raid dungeons -->
+			<blacklist area_id="750" /><!-- "Rift's Edge" -->
+			<blacklist area_id="450" /><!-- "Rift's Edge (Hard)" -->
+			<blacklist area_id="643" /><!-- "Wonderholme" -->
+			<blacklist area_id="443" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="743" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="477" /><!-- "Batu Desert" -->
+			<blacklist area_id="801" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="802" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="803" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="885" /><!-- "Dreadspire" -->
+			<blacklist area_id="886" /><!-- "Dreadspire: Upper Levels" -->
+			<blacklist area_id="911" /><!-- "Kelsaik's Raid (10-Person Raid)" -->
+			<blacklist area_id="975" /><!-- "Kelsaik's Raid (20-Person Raid)" -->
+			<blacklist area_id="950" /><!-- "Harrowhold" -->
+			<blacklist area_id="1022" /><!-- "Nexus" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>70211</abnormality><!-- "Floretta Soup" -->
+			<abnormality>70212</abnormality><!-- "Moongourd Muffin" -->
+			<abnormality>70213</abnormality><!-- "Shevranberry Cookie" -->
+			<abnormality>70221</abnormality><!-- "Struthio Breast Salad" -->
+			<abnormality>70222</abnormality><!-- "Half-Moon Croquette" -->
+			<abnormality>70223</abnormality><!-- "Freeholds Flame Salad" -->
+			<abnormality>70224</abnormality><!-- "Bleak Wings" -->
+			<abnormality>70225</abnormality><!-- "Traditional Bleakfields BBQ" -->
+			<abnormality>70226</abnormality><!-- "Fish Fry" -->
+			<abnormality>70227</abnormality><!-- "Steamed Fish" -->
+			<abnormality>70228</abnormality><!-- "Fish Soup" -->
+			<abnormality>70231</abnormality><!-- "Lamb Bulgogi" -->
+			<abnormality>70232</abnormality><!-- "Fish Steak" -->
+			<abnormality>70233</abnormality><!-- "Fish Fritters" -->
+			<abnormality>70234</abnormality><!-- "Pickled Fish" -->
+			<abnormality>70241</abnormality><!-- "Melsa's Luxurious Buffet" -->
+			<abnormality>70242</abnormality><!-- "Feast" -->
+			<abnormality>70243</abnormality><!-- "Spicy Fish Buffet" -->
+			<abnormality>70244</abnormality><!-- "Hot Fish Buffet" -->
+			<abnormality>70245</abnormality><!-- "Salty Fish Buffet" -->
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{time_left} seconds" display_time="3000" />
+				<text_to_speech text="Feed me!" voice_gender="Female" voice_age="Child" voice_position="0" volume="30" rate="+1"/>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Special Food for yourself -->
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="30" rewarn_timeout_seconds="5" trigger="Ending" target="Self" priority="4">
+		<abnormalities>
+			<abnormality>70261</abnormality><!-- "Fish Salad" -->
+			<abnormality>70262</abnormality><!-- "Seafood Mushroom Salad" -->
+			<abnormality>70263</abnormality><!-- "Pickled Verida Plant" -->
+			<abnormality>70264</abnormality><!-- "Pumpkin Pie" -->
+			<abnormality>70257</abnormality><!-- "Apple Pumpkin Smoothie" -->
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{time_left} seconds" display_time="3000" />
+				<text_to_speech text="{abnormality_name}." voice_gender="Female" voice_age="Adult" voice_position="0" volume="30" rate="+3"/>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Special Potion for yourself -->
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="30" rewarn_timeout_seconds="5" trigger="Ending" target="Self" priority="4">
+		<abnormalities>
+			<abnormality>8000122</abnormality><!-- "Rapid XP Potion (100%)" -->
+			<abnormality>8000123</abnormality><!-- "Rapid XP Potion (50%)" -->
+			<abnormality>8000124</abnormality><!-- "Rapid XP Potion (30%)" -->
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{time_left} seconds" display_time="3000" />
+				<text_to_speech text="{abnormality_name}." voice_gender="Female" voice_age="Adult" voice_position="0" volume="30" rate="+3"/>
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- 1.5 Dragon buff timer -->
+	<abnormality active="false" ingame="true" trigger="Added" target="Self" priority="1" ignore_classes="Mystic,Priest">
+		<abnormalities>
+			<abnormality>6001</abnormality>
+			<abnormality>6003</abnormality>
+			<abnormality>6012</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<beeps>
+					<beep frequency="0" duration="55000"/>
+					<beep frequency="550" duration="100"/>
+					<beep frequency="540" duration="100"/>
+					<beep frequency="530" duration="100"/>
+				</beeps>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- 2.0 Dragon buff timer -->
+	<abnormality active="false" ingame="true" trigger="Added" target="Self" priority="1" ignore_classes="Mystic,Priest">
+		<abnormalities>
+			<abnormality>6002</abnormality>
+			<abnormality>6004</abnormality>
+			<abnormality>6013</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<beeps>
+					<beep frequency="0" duration="55000"/>
+					<beep frequency="500" duration="100"/>
+					<beep frequency="490" duration="100"/>
+					<beep frequency="480" duration="100"/>
+				</beeps>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Ragnarok = Valkyrie burn -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Party" ignore_classes="Berserker,Valkyrie,Warrior,Slayer,Archer,Sorcerer,Gunner,Ninja,Reaper">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Raid dungeons -->
+			<blacklist area_id="750" /><!-- "Rift's Edge" -->
+			<blacklist area_id="450" /><!-- "Rift's Edge (Hard)" -->
+			<blacklist area_id="643" /><!-- "Wonderholme" -->
+			<blacklist area_id="443" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="743" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="477" /><!-- "Batu Desert" -->
+			<blacklist area_id="801" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="802" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="803" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="885" /><!-- "Dreadspire" -->
+			<blacklist area_id="886" /><!-- "Dreadspire: Upper Levels" -->
+			<blacklist area_id="911" /><!-- "Kelsaik's Raid (10-Person Raid)" -->
+			<blacklist area_id="975" /><!-- "Kelsaik's Raid (20-Person Raid)" -->
+			<blacklist area_id="950" /><!-- "Harrowhold" -->
+			<blacklist area_id="1022" /><!-- "Nexus" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>10155130</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
+				<text_to_speech text="{abnormality_name}" voice_gender="Male" voice_age="Adult" voice_position="0" volume="30" rate="+1"/>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Unleash = Berserker burn -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Party" ignore_classes="Berserker,Valkyrie,Warrior,Slayer,Archer,Sorcerer,Gunner,Ninja,Reaper">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Raid dungeons -->
+			<blacklist area_id="750" /><!-- "Rift's Edge" -->
+			<blacklist area_id="450" /><!-- "Rift's Edge (Hard)" -->
+			<blacklist area_id="643" /><!-- "Wonderholme" -->
+			<blacklist area_id="443" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="743" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="477" /><!-- "Batu Desert" -->
+			<blacklist area_id="801" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="802" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="803" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="885" /><!-- "Dreadspire" -->
+			<blacklist area_id="886" /><!-- "Dreadspire: Upper Levels" -->
+			<blacklist area_id="911" /><!-- "Kelsaik's Raid (10-Person Raid)" -->
+			<blacklist area_id="975" /><!-- "Kelsaik's Raid (20-Person Raid)" -->
+			<blacklist area_id="950" /><!-- "Harrowhold" -->
+			<blacklist area_id="1022" /><!-- "Nexus" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>401705</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
+				<text_to_speech text="{abnormality_name}" voice_gender="Male" voice_age="Adult" voice_position="0" volume="30" rate="+1"/>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Inner Harmony = Ninja burn -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Party" ignore_classes="Berserker,Valkyrie,Warrior,Slayer,Archer,Sorcerer,Gunner,Ninja,Reaper">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Raid dungeons -->
+			<blacklist area_id="750" /><!-- "Rift's Edge" -->
+			<blacklist area_id="450" /><!-- "Rift's Edge (Hard)" -->
+			<blacklist area_id="643" /><!-- "Wonderholme" -->
+			<blacklist area_id="443" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="743" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="477" /><!-- "Batu Desert" -->
+			<blacklist area_id="801" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="802" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="803" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="885" /><!-- "Dreadspire" -->
+			<blacklist area_id="886" /><!-- "Dreadspire: Upper Levels" -->
+			<blacklist area_id="911" /><!-- "Kelsaik's Raid (10-Person Raid)" -->
+			<blacklist area_id="975" /><!-- "Kelsaik's Raid (20-Person Raid)" -->
+			<blacklist area_id="950" /><!-- "Harrowhold" -->
+			<blacklist area_id="1022" /><!-- "Nexus" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>10154480</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
+				<text_to_speech text="{abnormality_name}" voice_gender="Male" voice_age="Adult" voice_position="0" volume="30" rate="+1"/>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Deadly Gamble = Warrior burn -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Party" ignore_classes="Berserker,Valkyrie,Warrior,Slayer,Archer,Sorcerer,Gunner,Ninja,Reaper">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Raid dungeons -->
+			<blacklist area_id="750" /><!-- "Rift's Edge" -->
+			<blacklist area_id="450" /><!-- "Rift's Edge (Hard)" -->
+			<blacklist area_id="643" /><!-- "Wonderholme" -->
+			<blacklist area_id="443" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="743" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="477" /><!-- "Batu Desert" -->
+			<blacklist area_id="801" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="802" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="803" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="885" /><!-- "Dreadspire" -->
+			<blacklist area_id="886" /><!-- "Dreadspire: Upper Levels" -->
+			<blacklist area_id="911" /><!-- "Kelsaik's Raid (10-Person Raid)" -->
+			<blacklist area_id="975" /><!-- "Kelsaik's Raid (20-Person Raid)" -->
+			<blacklist area_id="950" /><!-- "Harrowhold" -->
+			<blacklist area_id="1022" /><!-- "Nexus" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>100800</abnormality>
+			<abnormality>100801</abnormality>
+			<abnormality>100811</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
+				<text_to_speech text="{abnormality_name}" voice_gender="Male" voice_age="Adult" voice_position="0" volume="30" rate="+1"/>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Mana Boost = Sorcerer burn -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Party" ignore_classes="Berserker,Valkyrie,Warrior,Slayer,Archer,Sorcerer,Gunner,Ninja,Reaper">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Raid dungeons -->
+			<blacklist area_id="750" /><!-- "Rift's Edge" -->
+			<blacklist area_id="450" /><!-- "Rift's Edge (Hard)" -->
+			<blacklist area_id="643" /><!-- "Wonderholme" -->
+			<blacklist area_id="443" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="743" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="477" /><!-- "Batu Desert" -->
+			<blacklist area_id="801" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="802" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="803" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="885" /><!-- "Dreadspire" -->
+			<blacklist area_id="886" /><!-- "Dreadspire: Upper Levels" -->
+			<blacklist area_id="911" /><!-- "Kelsaik's Raid (10-Person Raid)" -->
+			<blacklist area_id="975" /><!-- "Kelsaik's Raid (20-Person Raid)" -->
+			<blacklist area_id="950" /><!-- "Harrowhold" -->
+			<blacklist area_id="1022" /><!-- "Nexus" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>500100</abnormality>
+			<abnormality>500150</abnormality>
+			<abnormality>501602</abnormality>
+			<abnormality>501603</abnormality>
+			<abnormality>501604</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
+				<text_to_speech text="{abnormality_name}" voice_gender="Male" voice_age="Adult" voice_position="0" volume="30" rate="+1"/>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- In Cold Blood = Slayer burn -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Party" ignore_classes="Berserker,Valkyrie,Warrior,Slayer,Archer,Sorcerer,Gunner,Ninja,Reaper">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Raid dungeons -->
+			<blacklist area_id="750" /><!-- "Rift's Edge" -->
+			<blacklist area_id="450" /><!-- "Rift's Edge (Hard)" -->
+			<blacklist area_id="643" /><!-- "Wonderholme" -->
+			<blacklist area_id="443" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="743" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="477" /><!-- "Batu Desert" -->
+			<blacklist area_id="801" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="802" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="803" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="885" /><!-- "Dreadspire" -->
+			<blacklist area_id="886" /><!-- "Dreadspire: Upper Levels" -->
+			<blacklist area_id="911" /><!-- "Kelsaik's Raid (10-Person Raid)" -->
+			<blacklist area_id="975" /><!-- "Kelsaik's Raid (20-Person Raid)" -->
+			<blacklist area_id="950" /><!-- "Harrowhold" -->
+			<blacklist area_id="1022" /><!-- "Nexus" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>300800</abnormality>
+			<abnormality>300801</abnormality>
+			<abnormality>300805</abnormality>
+			<abnormality>300806</abnormality>
+			<abnormality>300808</abnormality>
+			<abnormality>300809</abnormality>
+			<abnormality>300850</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
+				<text_to_speech text="{abnormality_name}" voice_gender="Male" voice_age="Adult" voice_position="0" volume="30" rate="+1"/>
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Windsong = Archer burn -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Party" ignore_classes="Berserker,Valkyrie,Warrior,Slayer,Archer,Sorcerer,Gunner,Ninja,Reaper">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Raid dungeons -->
+			<blacklist area_id="750" /><!-- "Rift's Edge" -->
+			<blacklist area_id="450" /><!-- "Rift's Edge (Hard)" -->
+			<blacklist area_id="643" /><!-- "Wonderholme" -->
+			<blacklist area_id="443" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="743" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="477" /><!-- "Batu Desert" -->
+			<blacklist area_id="801" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="802" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="803" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="885" /><!-- "Dreadspire" -->
+			<blacklist area_id="886" /><!-- "Dreadspire: Upper Levels" -->
+			<blacklist area_id="911" /><!-- "Kelsaik's Raid (10-Person Raid)" -->
+			<blacklist area_id="975" /><!-- "Kelsaik's Raid (20-Person Raid)" -->
+			<blacklist area_id="950" /><!-- "Harrowhold" -->
+			<blacklist area_id="1022" /><!-- "Nexus" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>602101</abnormality>
+			<abnormality>602107</abnormality>
+			<abnormality>602108</abnormality>
+			<abnormality>602221</abnormality>
+			<abnormality>602222</abnormality>
+			<abnormality>602223</abnormality>
+			<abnormality>602227</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
+				<text_to_speech text="{abnormality_name}" voice_gender="Male" voice_age="Adult" voice_position="0" volume="30" rate="+1"/>
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Modular Weapon System = Gunner burn -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Party" ignore_classes="Berserker,Valkyrie,Warrior,Slayer,Archer,Sorcerer,Gunner,Ninja,Reaper">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Raid dungeons -->
+			<blacklist area_id="750" /><!-- "Rift's Edge" -->
+			<blacklist area_id="450" /><!-- "Rift's Edge (Hard)" -->
+			<blacklist area_id="643" /><!-- "Wonderholme" -->
+			<blacklist area_id="443" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="743" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="477" /><!-- "Batu Desert" -->
+			<blacklist area_id="801" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="802" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="803" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="885" /><!-- "Dreadspire" -->
+			<blacklist area_id="886" /><!-- "Dreadspire: Upper Levels" -->
+			<blacklist area_id="911" /><!-- "Kelsaik's Raid (10-Person Raid)" -->
+			<blacklist area_id="975" /><!-- "Kelsaik's Raid (20-Person Raid)" -->
+			<blacklist area_id="950" /><!-- "Harrowhold" -->
+			<blacklist area_id="1022" /><!-- "Nexus" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>10152340</abnormality>
+			<abnormality>10152342</abnormality>
+			<abnormality>10152345</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
+				<text_to_speech text="{abnormality_name}" voice_gender="Male" voice_age="Adult" voice_position="0" volume="30" rate="+1"/>
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Shadow Reaping = Reaper burn -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Party" ignore_classes="Berserker,Valkyrie,Warrior,Slayer,Archer,Sorcerer,Gunner,Ninja,Reaper">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Raid dungeons -->
+			<blacklist area_id="750" /><!-- "Rift's Edge" -->
+			<blacklist area_id="450" /><!-- "Rift's Edge (Hard)" -->
+			<blacklist area_id="643" /><!-- "Wonderholme" -->
+			<blacklist area_id="443" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="743" /><!-- "Wonderholme (Hard)" -->
+			<blacklist area_id="477" /><!-- "Batu Desert" -->
+			<blacklist area_id="801" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="802" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="803" /><!-- "Nexus Traverse" -->
+			<blacklist area_id="885" /><!-- "Dreadspire" -->
+			<blacklist area_id="886" /><!-- "Dreadspire: Upper Levels" -->
+			<blacklist area_id="911" /><!-- "Kelsaik's Raid (10-Person Raid)" -->
+			<blacklist area_id="975" /><!-- "Kelsaik's Raid (20-Person Raid)" -->
+			<blacklist area_id="950" /><!-- "Harrowhold" -->
+			<blacklist area_id="1022" /><!-- "Nexus" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>10151010</abnormality>
+			<abnormality>10151011</abnormality>
+			<abnormality>10151012</abnormality>
+			<abnormality>10151013</abnormality>
+			<abnormality>10151015</abnormality>
+			<abnormality>10151016</abnormality>
+			<abnormality>10151017</abnormality>
+			<abnormality>10151018</abnormality>
+			<abnormality>10151019</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
+				<text_to_speech text="{abnormality_name}" voice_gender="Male" voice_age="Adult" voice_position="0" volume="30" rate="+1"/>
+			</notify>
+		</actions>
+	</abnormality>
+
+	<!-- Mounting Rage = Brawler start -->
+	<abnormality out_of_combat="true" active="true" trigger="Added" target="Party">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>10153110</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
+				<text_to_speech text="Go, Go, GO!" voice_gender="Male" voice_age="Adult"  voice_position="0" volume="100" rate="+1"/>
+			</notify>
+		</actions>
+	</abnormality>
+	
+	<!-- Guardian shout = Lancer start -->
+	<abnormality out_of_combat="true" active="true" trigger="Added" target="Party">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Guardians -->
+			<blacklist area_id="631" /><!-- "Sylvanoth" -->
+			<blacklist area_id="630" /><!-- "Val Aureum" -->
+			<blacklist area_id="628" /><!-- "Velika" -->
+			<blacklist area_id="627" /><!-- "Westonia" -->
+			<blacklist area_id="626" /><!-- "Val Aureum" -->
+			<blacklist area_id="623" /><!-- "Arcadia" -->
+			<blacklist area_id="622" /><!-- "Blessing Basin" -->
+			<blacklist area_id="621" /><!-- "Val Elenium" -->
+			<blacklist area_id="620" /><!-- "Veritas District" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>200200</abnormality>
+			<abnormality>200201</abnormality>
+			<abnormality>200202</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="1000" />
+				<text_to_speech text="Go, Go, GO!" voice_gender="Male" voice_age="Adult"  voice_position="0" volume="100" rate="+1"/>
+			</notify>
+		</actions>
+	</abnormality>
+
+</events>
