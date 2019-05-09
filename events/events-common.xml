@@ -1031,7 +1031,7 @@
 	</abnormality>
 	
 	<!-- Food for yourself -->
-	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="30" rewarn_timeout_seconds="5" trigger="MissingDuringFight" target="Self" priority="4" ignore_classes="Priest" >
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="30" rewarn_timeout_seconds="5" trigger="MissingDuringFight" target="Self" priority="4" ignore_classes="Priest,Mystic" >
 		<area_boss_blacklist>
 		<!-- PVP Battlegrounds -->
 			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
