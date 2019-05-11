@@ -1031,7 +1031,7 @@
 	</abnormality>
 	
 	<!-- Food for yourself -->
-	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="30" rewarn_timeout_seconds="5" trigger="MissingDuringFight" target="Self" priority="4" ignore_classes="Priest,Mystic" >
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="30" rewarn_timeout_seconds="10" trigger="MissingDuringFight" target="Self" priority="4" ignore_classes="Priest,Mystic" >
 		<area_boss_blacklist>
 		<!-- PVP Battlegrounds -->
 			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
@@ -1225,7 +1225,7 @@
 	</abnormality>
 
 	<!-- Special Food for yourself -->
-	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="30" rewarn_timeout_seconds="5" trigger="Ending" target="Self" priority="4">
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="30" rewarn_timeout_seconds="10" trigger="Ending" target="Self" priority="4">
 		<abnormalities>
 			<abnormality>70261</abnormality><!-- "Fish Salad" -->
 			<abnormality>70262</abnormality><!-- "Seafood Mushroom Salad" -->
@@ -1241,8 +1241,21 @@
 		</actions>
 	</abnormality>
 
+	<!-- Combat accelerator for yourself -->
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="10" rewarn_timeout_seconds="50" trigger="Ending" target="Self" priority="5">
+		<abnormalities>
+			<abnormality>5020013</abnormality><!-- "Combat accelerator" -->
+		</abnormalities>
+		<actions>
+			<notify>
+				<balloon title_text="{abnormality_name}" body_text="{time_left} seconds" display_time="3000" />
+				<text_to_speech text="{abnormality_name}." voice_gender="Female" voice_age="Adult" voice_position="0" volume="30" rate="+3"/>
+			</notify>
+		</actions>
+	</abnormality>
+	
 	<!-- Special Potion for yourself -->
-	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="30" rewarn_timeout_seconds="5" trigger="Ending" target="Self" priority="4">
+	<abnormality active="true" ingame="true" remaining_seconds_before_trigger="30" rewarn_timeout_seconds="10" trigger="Ending" target="Self" priority="4">
 		<abnormalities>
 			<abnormality>8000122</abnormality><!-- "Rapid XP Potion (100%)" -->
 			<abnormality>8000123</abnormality><!-- "Rapid XP Potion (50%)" -->
