@@ -139,15 +139,11 @@
 	<!-- Bahaar's Rage (shield to burn) -->
 	<abnormality active="true" priority="3" rewarn_timeout_seconds="4" ingame="true" trigger="Added" target="Self">
 		<abnormalities>
-		    <abnormality>90442006</abnormality>
-			<abnormality>90442100</abnormality>
 			<abnormality>90442102</abnormality>
-			<abnormality>90442104</abnormality>
-			<abnormality>90442106</abnormality>
 		</abnormalities>
 		<actions>
 		    <notify>
-				<text_to_speech voice_position="0" text="{abnormality_name}, Burn now!" rate="+2" />
+			    <text_to_speech voice_position="0" text="{abnormality_name}, Burn now!" rate="+2" />
 		    </notify>
 		</actions>
 	</abnormality>
@@ -155,13 +151,12 @@
 	<!-- Bahaar's Wrath (extra damage) -->
 	<abnormality active="true" priority="3" rewarn_timeout_seconds="4" ingame="true" trigger="Added" target="Self">
 		<abnormalities>
-		    <abnormality>90442101</abnormality>
-		    <abnormality>90442103</abnormality>
-		    <abnormality>90442107</abnormality>
+			<abnormality>90442103</abnormality>
+			<abnormality>90442107</abnormality>
 		</abnormalities>
 		<actions>
 		    <notify>
-				<text_to_speech voice_position="0" text="{abnormality_name}, Carefull." rate="+2" />
+			    <text_to_speech voice_position="0" text="{abnormality_name}, Carefull." rate="+2" />
 		    </notify>
 		</actions>
 	</abnormality>
