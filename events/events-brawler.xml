@@ -93,4 +93,100 @@
 			</notify>
 		</actions>
 	</abnormality>
+	<!-- Counter - Powerlink glyph -->
+	<abnormality active="true" ingame="true" trigger="Added" target="Self">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Event dungeons -->
+			<blacklist area_id="618" /><!-- "Super Quiz Bowl" -->
+			<blacklist area_id="451" /><!-- "Squalid Temple" -->
+			<blacklist area_id="452" /><!-- "Banquet of Blood" -->
+			<blacklist area_id="447" /><!-- "Harvest Festival Hall" -->
+		<!-- Leveling dungeons -->
+			<blacklist area_id="487" /><!-- "Bastion of Lok" -->
+			<blacklist area_id="488" /><!-- "Sinestral Manor" -->
+			<blacklist area_id="489" /><!-- "Cultists' Refuge" -->
+			<blacklist area_id="480" /><!-- "Sigil Adstringo" -->
+			<blacklist area_id="493" /><!-- "Akasha's Hideout" -->
+			<blacklist area_id="494" /><!-- "Saleron's Sky Garden" -->
+			<blacklist area_id="471" /><!-- "Necromancer Tomb" -->
+			<blacklist area_id="472" /><!-- "Golden Labyrinth" -->
+			<blacklist area_id="473" /><!-- "Ebon Tower" -->
+			<blacklist area_id="476" /><!-- "Labyrinth of Terror" -->
+			<blacklist area_id="478" /><!-- "Suryati's Peak" -->
+			<blacklist area_id="479" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="979" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="808" /><!-- "Sabex Armory (Lv. 62)" -->
+			<blacklist area_id="809" /><!-- "Macellarius Catacombs (Lv. 64)" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>31020</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<beeps>
+					<beep frequency="1400" duration="200"/>
+				</beeps>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="3000" />
+			</notify>
+		</actions>
+	</abnormality>
+	<!-- Roundhouse - Grounded glyph -->
+	<abnormality active="false" ingame="true" trigger="Added" target="Self">
+		<area_boss_blacklist>
+		<!-- PVP Battlegrounds -->
+			<blacklist area_id="102" /><!-- "Wintera Snowfield (Classic)" -->
+			<blacklist area_id="103" /><!-- "Wintera Snowfield" -->
+			<blacklist area_id="110" /><!-- "Gridiron" -->
+			<blacklist area_id="111" /><!-- "Iron Battleground" -->
+			<blacklist area_id="112" /><!-- "Fraywind Canyon" -->
+			<blacklist area_id="116" /><!-- "Corsairs' Stronghold" -->
+			<blacklist area_id="117" /><!-- "Kumasylum" -->
+			<blacklist area_id="118" /><!-- "Kumas Royale" -->
+			<blacklist area_id="119" /><!-- "Coliseum" -->
+			<blacklist area_id="152" /><!-- "Civil Unrest: Velika" -->
+			<blacklist area_id="1200" /><!-- "Shore Hold" -->
+		<!-- Event dungeons -->
+			<blacklist area_id="618" /><!-- "Super Quiz Bowl" -->
+			<blacklist area_id="451" /><!-- "Squalid Temple" -->
+			<blacklist area_id="452" /><!-- "Banquet of Blood" -->
+			<blacklist area_id="447" /><!-- "Harvest Festival Hall" -->
+		<!-- Leveling dungeons -->
+			<blacklist area_id="487" /><!-- "Bastion of Lok" -->
+			<blacklist area_id="488" /><!-- "Sinestral Manor" -->
+			<blacklist area_id="489" /><!-- "Cultists' Refuge" -->
+			<blacklist area_id="480" /><!-- "Sigil Adstringo" -->
+			<blacklist area_id="493" /><!-- "Akasha's Hideout" -->
+			<blacklist area_id="494" /><!-- "Saleron's Sky Garden" -->
+			<blacklist area_id="471" /><!-- "Necromancer Tomb" -->
+			<blacklist area_id="472" /><!-- "Golden Labyrinth" -->
+			<blacklist area_id="473" /><!-- "Ebon Tower" -->
+			<blacklist area_id="476" /><!-- "Labyrinth of Terror" -->
+			<blacklist area_id="478" /><!-- "Suryati's Peak" -->
+			<blacklist area_id="479" /><!-- "Saravash's Ascent" -->
+			<blacklist area_id="979" /><!-- "Saravash's Ascent" -->
+		</area_boss_blacklist>
+		<abnormalities>
+			<abnormality>31120</abnormality>
+		</abnormalities>
+		<actions>
+			<notify>
+				<beeps>
+					<beep frequency="1100" duration="200"/>
+				</beeps>
+				<balloon title_text="{abnormality_name}" body_text="{abnormality_name}" display_time="2000" />
+			</notify>
+		</actions>
+	</abnormality>
 </events>
