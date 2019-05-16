@@ -137,7 +137,7 @@
 	</abnormality>
 
 	<!-- Bahaar's Rage (shield to burn) -->
-	<abnormality active="true" priority="3" rewarn_timeout_seconds="4" ingame="true" trigger="Added" target="Self">
+	<abnormality active="false" priority="3" rewarn_timeout_seconds="4" ingame="true" trigger="Added" target="Self">
 		<abnormalities>
 			<abnormality>90442102</abnormality>
 		</abnormalities>
@@ -149,7 +149,7 @@
 	</abnormality>
 	
 	<!-- Bahaar's Wrath (extra damage) -->
-	<abnormality active="true" priority="3" rewarn_timeout_seconds="4" ingame="true" trigger="Added" target="Self">
+	<abnormality active="false" priority="3" rewarn_timeout_seconds="4" ingame="true" trigger="Added" target="Self">
 		<abnormalities>
 			<abnormality>90442103</abnormality>
 			<abnormality>90442107</abnormality>
